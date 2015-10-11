@@ -18,13 +18,13 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * QueryƒNƒ‰ƒX‚ÌfStatementƒtƒB[ƒ‹ƒh‚Å‚·B
+ * Queryã‚¯ãƒ©ã‚¹ã®fStatementãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã§ã™ã€‚
  * 
  * @author IGA Tosiki
  */
 public class StatementFieldPhp extends BlancoDbAbstractField {
     /**
-     * QueryƒNƒ‰ƒX‚ÌfStatementƒtƒB[ƒ‹ƒh‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Å‚·B
+     * Queryã‚¯ãƒ©ã‚¹ã®fStatementãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§ã™ã€‚
      * 
      * @author IGA Tosiki
      */
@@ -39,14 +39,14 @@ public class StatementFieldPhp extends BlancoDbAbstractField {
 
     public void expand() {
         final BlancoCgField cgField = fCgFactory.createField("fStatement",
-                "pdo.PDOStatement", "‚±‚ÌƒNƒ‰ƒX‚ª“à•”“I‚É—˜—p‚·‚éƒXƒe[ƒgƒƒ“ƒgƒIƒuƒWƒFƒNƒgB");
+                "pdo.PDOStatement", "ã“ã®ã‚¯ãƒ©ã‚¹ãŒå†…éƒ¨çš„ã«åˆ©ç”¨ã™ã‚‹ã‚¹ãƒ†ãƒ¼ãƒˆãƒ¡ãƒ³ãƒˆã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚");
         fCgClass.getFieldList().add(cgField);
 
         cgField.getLangDoc().getDescriptionList().add("");
-        cgField.getLangDoc().getDescriptionList().add("‚±‚ÌƒIƒuƒWƒFƒNƒg‚Í“à•”“I‚É—˜—p‚³‚ê‚Ü‚·B");
+        cgField.getLangDoc().getDescriptionList().add("ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯å†…éƒ¨çš„ã«åˆ©ç”¨ã•ã‚Œã¾ã™ã€‚");
 
         /*
-         * ƒWƒFƒlƒŒ[ƒVƒ‡ƒ“ƒMƒƒƒbƒvƒfƒUƒCƒ“ƒpƒ^[ƒ“‚ª—˜—p‰Â”\‚É‚È‚é–Ú“I‚ÅAƒXƒR[ƒv‚Íprotected‚Æ‚µ‚Ü‚·B
+         * ã‚¸ã‚§ãƒãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚®ãƒ£ãƒƒãƒ—ãƒ‡ã‚¶ã‚¤ãƒ³ãƒ‘ã‚¿ãƒ¼ãƒ³ãŒåˆ©ç”¨å¯èƒ½ã«ãªã‚‹ç›®çš„ã§ã€ã‚¹ã‚³ãƒ¼ãƒ—ã¯protectedã¨ã—ã¾ã™ã€‚
          */
         cgField.setAccess("protected");
     }

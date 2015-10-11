@@ -31,7 +31,7 @@ import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 
 public class BlancoDbPhpProcessImpl implements BlancoDbPhpProcess {
     /**
-     * ƒŠƒ\[ƒXƒoƒ“ƒhƒ‹ƒAƒNƒZƒTƒIƒuƒWƒFƒNƒg‚ğ‹L‰¯‚µ‚Ü‚·B
+     * ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚¢ã‚¯ã‚»ã‚µã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¨˜æ†¶ã—ã¾ã™ã€‚
      */
     private final BlancoDbPhpResourceBundle fBundle = new BlancoDbPhpResourceBundle();
 
@@ -68,43 +68,43 @@ public class BlancoDbPhpProcessImpl implements BlancoDbPhpProcess {
             }
             dbSetting.setEncoding(input.getEncoding());
 
-            // ƒXƒe[ƒgƒƒ“ƒgƒ^ƒCƒ€ƒAƒEƒg’l‚ÍPHP”Å‚É‚Í‚ ‚è‚Ü‚¹‚ñB
+            // ã‚¹ãƒ†ãƒ¼ãƒˆãƒ¡ãƒ³ãƒˆã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆå€¤ã¯PHPç‰ˆã«ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
             dbSetting.setExecuteSql(new BlancoDbExecuteSqlStringGroup()
                     .convertToInt(input.getExecutesql()));
             if (dbSetting.getExecuteSql() == BlancoDbExecuteSqlStringGroup.NOT_DEFINED) {
-                throw new IllegalArgumentException("executesql‚Æ‚µ‚Ä•s³‚È’l("
-                        + input.getExecutesql() + ")‚ª—^‚¦‚ç‚ê‚Ü‚µ‚½B");
+                throw new IllegalArgumentException("executesqlã¨ã—ã¦ä¸æ­£ãªå€¤("
+                        + input.getExecutesql() + ")ãŒä¸ãˆã‚‰ã‚Œã¾ã—ãŸã€‚");
             }
 
             if (input.getSchema() != null) {
-                // ƒXƒL[ƒ}–¼‚ğw’èB
+                // ã‚¹ã‚­ãƒ¼ãƒåã‚’æŒ‡å®šã€‚
                 dbSetting.setSchema(input.getSchema());
             }
 
             if (input.getTable() == null || input.getTable().equals("true")) {
-                // ’Pˆê•\ƒAƒNƒZƒT‚ğ©“®¶¬
+                // å˜ä¸€è¡¨ã‚¢ã‚¯ã‚»ã‚µã‚’è‡ªå‹•ç”Ÿæˆ
                 final BlancoDbTableMeta2Xml tableMeta2Xml = new BlancoDbTableMeta2Xml() {
                     public boolean progress(int progressCurrent,
                             int progressTotal, String progressItem) {
-                        // í‚Étrue‚ğ•Ô‚µ‚Ü‚·B
+                        // å¸¸ã«trueã‚’è¿”ã—ã¾ã™ã€‚
                         return true;
                     }
 
                     protected boolean isSkipTypeForSimpleTable(
                             final BlancoDbMetaDataColumnStructure columnStructure) {
-                        // PHP”Å‚Å‚ÍƒoƒCƒiƒŠŒ^‚âlongvarchar‚ğ’Êí‚Ì•\ƒAƒNƒZƒX‚Æ“¯‚Éˆµ‚¤‚±‚Æ‚ª‚Å‚«‚é‚Æ‰¼’è‚µ‚ÄÀ‘•‚³‚ê‚Ä‚¢‚Ü‚·B
+                        // PHPç‰ˆã§ã¯ãƒã‚¤ãƒŠãƒªå‹ã‚„longvarcharã‚’é€šå¸¸ã®è¡¨ã‚¢ã‚¯ã‚»ã‚¹ã¨åŒæ™‚ã«æ‰±ã†ã“ã¨ãŒã§ãã‚‹ã¨ä»®å®šã—ã¦å®Ÿè£…ã•ã‚Œã¦ã„ã¾ã™ã€‚
                         return false;
                     }
                 };
                 tableMeta2Xml.setFormatSql(true);
                 tableMeta2Xml.process(dbSetting, blancoTmpDbTableDirectory);
 
-                // XMLƒtƒ@ƒCƒ‹‚ğŒ³‚ÉR/Oƒ}ƒbƒsƒ“ƒO‚ğ©“®¶¬
+                // XMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’å…ƒã«R/Oãƒãƒƒãƒ”ãƒ³ã‚°ã‚’è‡ªå‹•ç”Ÿæˆ
                 final BlancoDbXml2PhpClass generator = new BlancoDbXml2PhpClass() {
                     public boolean progress(int progressCurrent,
                             int progressTotal, String progressItem) {
-                        // í‚Étrue‚ğ•Ô‚µ‚Ü‚·B
+                        // å¸¸ã«trueã‚’è¿”ã—ã¾ã™ã€‚
                         return true;
                     }
                 };
@@ -126,11 +126,11 @@ public class BlancoDbPhpProcessImpl implements BlancoDbPhpProcess {
                 meta2Xml.processDirectory(fileMetadir, blancoTmpDbSqlDirectory
                         .getAbsolutePath());
 
-                // XMLƒtƒ@ƒCƒ‹‚ğŒ³‚ÉR/Oƒ}ƒbƒsƒ“ƒO‚ğ©“®¶¬
+                // XMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’å…ƒã«R/Oãƒãƒƒãƒ”ãƒ³ã‚°ã‚’è‡ªå‹•ç”Ÿæˆ
                 final BlancoDbXml2PhpClass generator = new BlancoDbXml2PhpClass() {
                     public boolean progress(int progressCurrent,
                             int progressTotal, String progressItem) {
-                        // í‚Étrue‚ğ•Ô‚µ‚Ü‚·B
+                        // å¸¸ã«trueã‚’è¿”ã—ã¾ã™ã€‚
                         return true;
                     }
                 };

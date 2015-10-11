@@ -20,7 +20,7 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  * 
  * @author Tosiki Iga
  */
@@ -36,17 +36,17 @@ public class GetListMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod("getList",
-                "ŒŸõŒ‹‰Ê‚ğƒŠƒXƒg‚Åæ“¾‚µ‚Ü‚·B");
+                "æ¤œç´¢çµæœã‚’ãƒªã‚¹ãƒˆã§å–å¾—ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         cgMethod.setReturn(fCgFactory.createReturn("array", fSqlInfo.getName()
-                + "ƒNƒ‰ƒX‚ÌListBŒŸõŒ‹‰Ê‚ª0Œ‚Ìê‡‚É‚Í‹ó‚ÌƒŠƒXƒgB"));
+                + "ã‚¯ãƒ©ã‚¹ã®Listã€‚æ¤œç´¢çµæœãŒ0ä»¶ã®å ´åˆã«ã¯ç©ºã®ãƒªã‚¹ãƒˆã€‚"));
 
         final List listDesc = cgMethod.getLangDoc().getDescriptionList();
-        listDesc.add("ƒŠƒXƒg‚É‚Í " + fSqlInfo.getName() + "ƒNƒ‰ƒX‚ªŠi”[‚³‚ê‚Ü‚·B");
+        listDesc.add("ãƒªã‚¹ãƒˆã«ã¯ " + fSqlInfo.getName() + "ã‚¯ãƒ©ã‚¹ãŒæ ¼ç´ã•ã‚Œã¾ã™ã€‚");
 
         cgMethod.getParameterList().add(
-                fCgFactory.createParameter("size", "integer", "“Ç‚İo‚µ‚ğs‚¤s”B"));
+                fCgFactory.createParameter("size", "integer", "èª­ã¿å‡ºã—ã‚’è¡Œã†è¡Œæ•°ã€‚"));
 
         final List listLine = cgMethod.getLineList();
 

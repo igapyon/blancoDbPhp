@@ -24,9 +24,9 @@ import blanco.db.expander.exception.NoRowFoundExceptionClassPhp;
 import blanco.db.expander.exception.TooManyRowsFoundExceptionClassPhp;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  * 
- * ƒVƒ“ƒOƒ‹‘®«‚ªtrue‚Ìê‡‚É‚Ì‚İA‚±‚ÌƒNƒ‰ƒX‚Í—˜—p‚³‚ê‚Ü‚·
+ * ã‚·ãƒ³ã‚°ãƒ«å±æ€§ãŒtrueã®å ´åˆã«ã®ã¿ã€ã“ã®ã‚¯ãƒ©ã‚¹ã¯åˆ©ç”¨ã•ã‚Œã¾ã™
  * 
  * @author Tosiki Iga
  */
@@ -42,22 +42,22 @@ public class GetSingleRowMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod("getSingleRow",
-                "Œ»İ‚Ìs‚Ìƒf[ƒ^‚ğƒIƒuƒWƒFƒNƒg‚Æ‚µ‚Äæ“¾‚µ‚Ü‚·B");
+                "ç¾åœ¨ã®è¡Œã®ãƒ‡ãƒ¼ã‚¿ã‚’ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ã—ã¦å–å¾—ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
-        // sƒIƒuƒWƒFƒNƒg‚ÌŒ^–¼‚ğæ“¾‚µ‚Ü‚·B
+        // è¡Œã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹åã‚’å–å¾—ã—ã¾ã™ã€‚
         final String rowObjectType = fDbSetting.getBasePackage() + ".row."
                 + BlancoNameAdjuster.toClassName(fSqlInfo.getName()) + "Row";
 
-        cgMethod.setReturn(fCgFactory.createReturn(rowObjectType, "sƒIƒuƒWƒFƒNƒg"));
+        cgMethod.setReturn(fCgFactory.createReturn(rowObjectType, "è¡Œã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ"));
 
         final List listDesc = cgMethod.getLangDoc().getDescriptionList();
 
-        listDesc.add("‚±‚Ìƒƒ\ƒbƒh‚ğ—˜—p‚·‚éê‡‚É‚ÍAnext()‚È‚Ç‚ÌƒJ[ƒ\ƒ‹‚ğ‘€ì‚·‚éƒƒ\ƒbƒh‚Æ‚Í•¹—p‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B");
+        listDesc.add("ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’åˆ©ç”¨ã™ã‚‹å ´åˆã«ã¯ã€next()ãªã©ã®ã‚«ãƒ¼ã‚½ãƒ«ã‚’æ“ä½œã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã¨ã¯ä½µç”¨ã—ãªã„ã§ãã ã•ã„ã€‚");
         listDesc.add("");
-        listDesc.add("single‘®«‚ª—LŒø");
-        listDesc.add("ŒŸõŒ‹‰Ê‚ª1ŒˆÈŠO‚Ìê‡‚É‚ÍANotSingleRowExceptionƒNƒ‰ƒX‚ğ");
-        listDesc.add("”h¶‚µ‚½ƒNƒ‰ƒX‚Ì—áŠO‚ª”­¶‚µ‚Ü‚·B");
+        listDesc.add("singleå±æ€§ãŒæœ‰åŠ¹");
+        listDesc.add("æ¤œç´¢çµæœãŒ1ä»¶ä»¥å¤–ã®å ´åˆã«ã¯ã€NotSingleRowExceptionã‚¯ãƒ©ã‚¹ã‚’");
+        listDesc.add("æ´¾ç”Ÿã—ãŸã‚¯ãƒ©ã‚¹ã®ä¾‹å¤–ãŒç™ºç”Ÿã—ã¾ã™ã€‚");
 
         final List listLine = cgMethod.getLineList();
 
@@ -66,7 +66,7 @@ public class GetSingleRowMethodPhp extends BlancoDbAbstractMethod {
                         + NoRowFoundExceptionClassPhp.CLASS_NAME);
 
         listLine.add("if ($this->next() == FALSE) {");
-        listLine.add("throw new NoRowFoundException(\"s‚ªŒŸõ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B\");");
+        listLine.add("throw new NoRowFoundException(\"è¡ŒãŒæ¤œç´¢ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚\");");
         listLine.add("}");
         listLine.add("");
 
@@ -77,10 +77,10 @@ public class GetSingleRowMethodPhp extends BlancoDbAbstractMethod {
                 BlancoDbUtil.getRuntimePackage(fDbSetting) + ".exception."
                         + TooManyRowsFoundExceptionClassPhp.CLASS_NAME);
 
-        // 1s‚ğ’´‚¦‚Ä•ÏX‚ª‚ ‚Á‚½‚©‚Ç‚¤‚©‚ğƒ`ƒFƒbƒNB
+        // 1è¡Œã‚’è¶…ãˆã¦å¤‰æ›´ãŒã‚ã£ãŸã‹ã©ã†ã‹ã‚’ãƒã‚§ãƒƒã‚¯ã€‚
         listLine.add("if ($this->next()) {");
         listLine
-                .add("throw new TooManyRowsFoundException(\"1ŒˆÈã‚Ìs‚ªŒŸõ‚³‚ê‚Ü‚µ‚½B\");");
+                .add("throw new TooManyRowsFoundException(\"1ä»¶ä»¥ä¸Šã®è¡ŒãŒæ¤œç´¢ã•ã‚Œã¾ã—ãŸã€‚\");");
         listLine.add("}");
         listLine.add("");
 

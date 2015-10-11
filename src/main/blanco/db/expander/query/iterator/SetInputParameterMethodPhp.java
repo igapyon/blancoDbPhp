@@ -26,7 +26,7 @@ import blanco.dbmetadata.BlancoDbMetaDataUtil;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  * 
  * @author Tosiki Iga
  */
@@ -42,7 +42,7 @@ public class SetInputParameterMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                "setInputParameter", "ƒNƒGƒŠ‚É—^‚¦‚é“ü—Íƒpƒ‰ƒ[ƒ^‚ğƒZƒbƒg‚µ‚Ü‚·B");
+                "setInputParameter", "ã‚¯ã‚¨ãƒªã«ä¸ãˆã‚‹å…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã‚»ãƒƒãƒˆã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         for (int index = 0; index < fSqlInfo.getInParameterList().size(); index++) {
@@ -59,7 +59,7 @@ public class SetInputParameterMethodPhp extends BlancoDbAbstractMethod {
                                                     .getPhpType(columnStructure),
                                             "'"
                                                     + columnStructure.getName()
-                                                    + "' SQL“ü—Íƒpƒ‰ƒ[ƒ^BDBã‚ÌŒ^‚Í["
+                                                    + "' SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã€‚DBä¸Šã®å‹ã¯["
                                                     + BlancoDbMetaDataUtil
                                                             .convertJdbcDataTypeToString(columnStructure
                                                                     .getDataType())
@@ -68,7 +68,7 @@ public class SetInputParameterMethodPhp extends BlancoDbAbstractMethod {
 
         final List listLine = cgMethod.getLineList();
 
-        // statement‚ª–¢Šm•Û‚Å‚ ‚é‚Î‚ ‚¢A‹­§“I‚ÉprepareStatement‚ğŒÄ‚Ño‚µ‚Ü‚·B
+        // statementãŒæœªç¢ºä¿ã§ã‚ã‚‹ã°ã‚ã„ã€å¼·åˆ¶çš„ã«prepareStatementã‚’å‘¼ã³å‡ºã—ã¾ã™ã€‚
         listLine.add("if ($this->fStatement == NULL) {");
         listLine.add("$this->prepareStatement();");
         listLine.add("}");
@@ -76,36 +76,36 @@ public class SetInputParameterMethodPhp extends BlancoDbAbstractMethod {
         final BlancoDbQueryParserUtil query = new BlancoDbQueryParserUtil(
                 fSqlInfo.getQuery());
 
-        // Šù‚Éˆ—‚ğ‚µ‚½ƒpƒ‰ƒ[ƒ^‚Ìƒ}ƒbƒvB
+        // æ—¢ã«å‡¦ç†ã‚’ã—ãŸãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ãƒãƒƒãƒ—ã€‚
         final HashMap mapProcessedParam = new HashMap();
 
         final Iterator ite = fSqlInfo.getInParameterList().iterator();
         for (int index = 1; ite.hasNext(); index++) {
-            // SQL•¶‚©‚çƒpƒ‰ƒ[ƒ^‚ğ”­Œ©‚µ‚Ä‚¢‚Ü‚·B
+            // SQLæ–‡ã‹ã‚‰ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ç™ºè¦‹ã—ã¦ã„ã¾ã™ã€‚
             final BlancoDbMetaDataColumnStructure columnStructure = (BlancoDbMetaDataColumnStructure) ite
                     .next();
 
             final int[] listCol = query.getSqlParameters(columnStructure
                     .getName());
             if (listCol == null) {
-                throw new IllegalArgumentException("SQL’è‹`ID["
-                        + fSqlInfo.getName() + "]‚Ì SQL“ü—Íƒpƒ‰ƒ[ƒ^["
-                        + columnStructure.getName() + "]‚ªŒ‹‚Ñ‚Â‚¢‚Ä‚¢‚¹‚ñ.");
+                throw new IllegalArgumentException("SQLå®šç¾©ID["
+                        + fSqlInfo.getName() + "]ã® SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿["
+                        + columnStructure.getName() + "]ãŒçµã³ã¤ã„ã¦ã„ã›ã‚“.");
             }
             for (int iteSame = 0; iteSame < listCol.length; iteSame++) {
                 if (mapProcessedParam.get(columnStructure.getName()) != null) {
-                    // Šù‚Éˆ—‚ğ‚³‚ê‚Ä‚¢‚Ü‚·B
-                    // PHP”Å‚Ìê‡‚É‚ÍSQLƒpƒ‰ƒ[ƒ^‚Í–¼‘Oˆø‚«“–‚Ä‚Å‚ ‚é‚Ì‚ÅA2“x–Ú‚Íˆ—‚¹‚¸‚ÉƒXƒLƒbƒv‚µ‚Ü‚·B
+                    // æ—¢ã«å‡¦ç†ã‚’ã•ã‚Œã¦ã„ã¾ã™ã€‚
+                    // PHPç‰ˆã®å ´åˆã«ã¯SQLãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã¯åå‰å¼•ãå½“ã¦ã§ã‚ã‚‹ã®ã§ã€2åº¦ç›®ã¯å‡¦ç†ã›ãšã«ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
                     continue;
                 }
-                // Šù‚Éˆ—Ï‚Ìƒpƒ‰ƒ[ƒ^‚Æ‚µ‚Ä‹L‰¯‚µ‚Ü‚·B
+                // æ—¢ã«å‡¦ç†æ¸ˆã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã¨ã—ã¦è¨˜æ†¶ã—ã¾ã™ã€‚
                 mapProcessedParam.put(columnStructure.getName(),
                         columnStructure);
 
                 listLine.add("");
 
-                listLine.add("// SQL“ü—Íƒpƒ‰ƒ[ƒ^[" + columnStructure.getName()
-                        + "]‚ğİ’è‚µ‚Ü‚·B");
+                listLine.add("// SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿[" + columnStructure.getName()
+                        + "]ã‚’è¨­å®šã—ã¾ã™ã€‚");
                 listLine.add("$this->fStatement->bindParam(':"
                         + columnStructure.getName() + "', $"
                         + columnStructure.getName() + ", "

@@ -15,13 +15,13 @@ import blanco.dbmetadata.BlancoDbMetaDataUtil;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 
 /**
- * blancoDb‚ÌŒ^ƒ}ƒbƒsƒ“ƒO‚ÉŠÖ‚·‚éƒƒ\ƒbƒh‚ğW‚ß‚½ƒNƒ‰ƒXB
+ * blancoDbã®å‹ãƒãƒƒãƒ”ãƒ³ã‚°ã«é–¢ã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã‚’é›†ã‚ãŸã‚¯ãƒ©ã‚¹ã€‚
  * 
  * @author ToshikiIga
  */
 public final class BlancoDbMappingUtilPhp {
     /**
-     * PDO‚Æ‚µ‚Ä‚ÌŒ^–¼‚ğæ“¾‚µ‚Ü‚·B
+     * PDOã¨ã—ã¦ã®å‹åã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param columnStructure
      * @return
@@ -64,23 +64,23 @@ public final class BlancoDbMappingUtilPhp {
         case Types.REF:
         case Types.DATALINK:
         default:
-            throw new IllegalArgumentException("SetInputParameter: —ñƒpƒ‰ƒ[ƒ^["
+            throw new IllegalArgumentException("SetInputParameter: åˆ—ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿["
                     + columnStructure.getName()
                     + "]("
                     + BlancoDbMetaDataUtil
                             .convertJdbcDataTypeToString(columnStructure
                                     .getDataType())
-                    + ")‚ÌƒoƒCƒ“ƒh: ˆ—‚Å‚«‚È‚¢SQLŒ^("
+                    + ")ã®ãƒã‚¤ãƒ³ãƒ‰: å‡¦ç†ã§ããªã„SQLå‹("
                     + columnStructure.getDataType()
                     + "/"
                     + BlancoDbMetaDataUtil
                             .convertJdbcDataTypeToString(columnStructure
-                                    .getDataType()) + ")‚ªw’è‚³‚ê‚Ü‚µ‚½B");
+                                    .getDataType()) + ")ãŒæŒ‡å®šã•ã‚Œã¾ã—ãŸã€‚");
         }
     }
 
     /**
-     * PHP‚Æ‚µ‚Ä‚ÌŒ^–¼‚ğæ“¾‚µ‚Ü‚·B
+     * PHPã¨ã—ã¦ã®å‹åã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param columnStructure
      * @return
@@ -123,18 +123,18 @@ public final class BlancoDbMappingUtilPhp {
         case Types.REF:
         case Types.DATALINK:
         default:
-            throw new IllegalArgumentException("SetInputParameter: —ñƒpƒ‰ƒ[ƒ^["
+            throw new IllegalArgumentException("SetInputParameter: åˆ—ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿["
                     + columnStructure.getName()
                     + "]("
                     + BlancoDbMetaDataUtil
                             .convertJdbcDataTypeToString(columnStructure
                                     .getDataType())
-                    + ")‚ÌƒoƒCƒ“ƒh: ˆ—‚Å‚«‚È‚¢SQLŒ^("
+                    + ")ã®ãƒã‚¤ãƒ³ãƒ‰: å‡¦ç†ã§ããªã„SQLå‹("
                     + columnStructure.getDataType()
                     + "/"
                     + BlancoDbMetaDataUtil
                             .convertJdbcDataTypeToString(columnStructure
-                                    .getDataType()) + ")‚ªw’è‚³‚ê‚Ü‚µ‚½B");
+                                    .getDataType()) + ")ãŒæŒ‡å®šã•ã‚Œã¾ã—ãŸã€‚");
         }
     }
 }

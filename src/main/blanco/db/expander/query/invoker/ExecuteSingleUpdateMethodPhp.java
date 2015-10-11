@@ -23,7 +23,7 @@ import blanco.db.expander.exception.NoRowModifiedExceptionClassPhp;
 import blanco.db.expander.exception.TooManyRowsModifiedExceptionClassPhp;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  * 
  * @author Tosiki Iga
  */
@@ -39,17 +39,17 @@ public class ExecuteSingleUpdateMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                "executeSingleUpdate", "ÀsŒ^ƒNƒGƒŠ‚ğÀs‚µ‚Ü‚·B");
+                "executeSingleUpdate", "å®Ÿè¡Œå‹ã‚¯ã‚¨ãƒªã‚’å®Ÿè¡Œã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         cgMethod.getLangDoc().getDescriptionList().add(
-                "ƒf[ƒ^ƒx[ƒX‚Ì§–ñˆá”½‚ª”­¶‚µ‚½ê‡‚É‚Í IntegrityConstraintException —áŠO‚ª”­¶‚µ‚Ü‚·B");
+                "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®åˆ¶ç´„é•åãŒç™ºç”Ÿã—ãŸå ´åˆã«ã¯ IntegrityConstraintException ä¾‹å¤–ãŒç™ºç”Ÿã—ã¾ã™ã€‚");
         cgMethod.getLangDoc().getDescriptionList().add("");
 
-        cgMethod.getLangDoc().getDescriptionList().add("single‘®«‚ª—LŒø");
+        cgMethod.getLangDoc().getDescriptionList().add("singleå±æ€§ãŒæœ‰åŠ¹");
         cgMethod.getLangDoc().getDescriptionList().add(
-                "ÀsŒ‹‰Ê‚ª1ŒˆÈŠO‚Ìê‡‚É‚ÍANotSingleRowExceptionƒNƒ‰ƒX‚ğ");
-        cgMethod.getLangDoc().getDescriptionList().add("”h¶‚µ‚½ƒNƒ‰ƒX‚Ì—áŠO‚ª”­¶‚µ‚Ü‚·B");
+                "å®Ÿè¡ŒçµæœãŒ1ä»¶ä»¥å¤–ã®å ´åˆã«ã¯ã€NotSingleRowExceptionã‚¯ãƒ©ã‚¹ã‚’");
+        cgMethod.getLangDoc().getDescriptionList().add("æ´¾ç”Ÿã—ãŸã‚¯ãƒ©ã‚¹ã®ä¾‹å¤–ãŒç™ºç”Ÿã—ã¾ã™ã€‚");
 
         final List listLine = cgMethod.getLineList();
 
@@ -65,9 +65,9 @@ public class ExecuteSingleUpdateMethodPhp extends BlancoDbAbstractMethod {
 
         listLine.add("if ($result == 0) {");
         listLine.add("throw new " + NoRowModifiedExceptionClassPhp.CLASS_NAME
-                + "(\"s‚ªˆêŒ‚à•ÏX‚³‚ê‚Ü‚¹‚ñ‚Å‚µ‚½B\");");
+                + "(\"è¡ŒãŒä¸€ä»¶ã‚‚å¤‰æ›´ã•ã‚Œã¾ã›ã‚“ã§ã—ãŸã€‚\");");
         listLine.add("} else if ($result > 1) {");
-        listLine.add("$message = \"ˆêŒ‚ğ’´‚¦‚és‚ª•ÏX‚³‚ê‚Ä‚µ‚Ü‚¢‚Ü‚µ‚½B‰e‹¿‚Ì‚ ‚Á‚½Œ”:\" . $result;");
+        listLine.add("$message = \"ä¸€ä»¶ã‚’è¶…ãˆã‚‹è¡ŒãŒå¤‰æ›´ã•ã‚Œã¦ã—ã¾ã„ã¾ã—ãŸã€‚å½±éŸ¿ã®ã‚ã£ãŸä»¶æ•°:\" . $result;");
         listLine.add("throw new "
                 + TooManyRowsModifiedExceptionClassPhp.CLASS_NAME
                 + "($message);");

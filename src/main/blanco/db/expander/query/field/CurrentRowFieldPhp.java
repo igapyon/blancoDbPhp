@@ -18,13 +18,13 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * QueryƒNƒ‰ƒX‚ÌfCurrentRowƒtƒB[ƒ‹ƒh‚Å‚·B
+ * Queryã‚¯ãƒ©ã‚¹ã®fCurrentRowãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã§ã™ã€‚
  * 
  * @author IGA Tosiki
  */
 public class CurrentRowFieldPhp extends BlancoDbAbstractField {
     /**
-     * QueryƒNƒ‰ƒX‚ÌfCurrentRowƒtƒB[ƒ‹ƒh‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Å‚·B
+     * Queryã‚¯ãƒ©ã‚¹ã®fCurrentRowãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§ã™ã€‚
      * 
      * @author IGA Tosiki
      */
@@ -39,11 +39,11 @@ public class CurrentRowFieldPhp extends BlancoDbAbstractField {
 
     public void expand() {
         final BlancoCgField cgField = fCgFactory.createField("fCurrentRow",
-                "array", "Œ»İƒtƒFƒbƒ`‚µ‚Ä‚¢‚és‚Ì“à—eB");
+                "array", "ç¾åœ¨ãƒ•ã‚§ãƒƒãƒã—ã¦ã„ã‚‹è¡Œã®å†…å®¹ã€‚");
         fCgClass.getFieldList().add(cgField);
 
         /*
-         * ƒWƒFƒlƒŒ[ƒVƒ‡ƒ“ƒMƒƒƒbƒvƒfƒUƒCƒ“ƒpƒ^[ƒ“‚ª—˜—p‰Â”\‚É‚È‚é–Ú“I‚ÅAƒXƒR[ƒv‚Íprotected‚Æ‚µ‚Ü‚·B
+         * ã‚¸ã‚§ãƒãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚®ãƒ£ãƒƒãƒ—ãƒ‡ã‚¶ã‚¤ãƒ³ãƒ‘ã‚¿ãƒ¼ãƒ³ãŒåˆ©ç”¨å¯èƒ½ã«ãªã‚‹ç›®çš„ã§ã€ã‚¹ã‚³ãƒ¼ãƒ—ã¯protectedã¨ã—ã¾ã™ã€‚
          */
         cgField.setAccess("protected");
     }

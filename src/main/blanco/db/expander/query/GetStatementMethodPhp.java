@@ -20,7 +20,7 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  * 
  * @author tosiki iga
  */
@@ -36,14 +36,14 @@ public class GetStatementMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod("getStatement",
-                "ƒXƒe[ƒgƒƒ“ƒg (PDOStatement) ‚ğæ“¾‚µ‚Ü‚·B");
+                "ã‚¹ãƒ†ãƒ¼ãƒˆãƒ¡ãƒ³ãƒˆ (PDOStatement) ã‚’å–å¾—ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         cgMethod.setReturn(fCgFactory.createReturn("pdo.PDOStatement",
-                "StatementƒIƒuƒWƒFƒNƒg"));
+                "Statementã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ"));
 
         cgMethod.getLangDoc().getDescriptionList().add(
-                "‚±‚Ìƒƒ\ƒbƒh‚ğŒÄ‚Ño‚·‚±‚Æ‚Í„§‚³‚ê‚Ü‚¹‚ñBˆê”Ê“I‚É Statement‚ğ’¼Ú—˜—p‚·‚é•K—v‚Í‚ ‚è‚Ü‚¹‚ñB");
+                "ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã™ã“ã¨ã¯æ¨å¥¨ã•ã‚Œã¾ã›ã‚“ã€‚ä¸€èˆ¬çš„ã« Statementã‚’ç›´æ¥åˆ©ç”¨ã™ã‚‹å¿…è¦ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚");
 
         final List listLine = cgMethod.getLineList();
 

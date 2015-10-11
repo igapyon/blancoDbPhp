@@ -18,30 +18,30 @@ import blanco.cg.valueobject.BlancoCgMethod;
 import blanco.cg.valueobject.BlancoCgSourceFile;
 
 /**
- * ƒf[ƒ^ƒx[ƒX‚Ìˆ—‚ÌŒ‹‰ÊA1s‚àƒf[ƒ^‚ªŒŸõ‚³‚ê‚È‚©‚Á‚½‚±‚Æ‚ðŽ¦‚·—áŠOƒNƒ‰ƒX
+ * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®å‡¦ç†ã®çµæžœã€1è¡Œã‚‚ãƒ‡ãƒ¼ã‚¿ãŒæ¤œç´¢ã•ã‚Œãªã‹ã£ãŸã“ã¨ã‚’ç¤ºã™ä¾‹å¤–ã‚¯ãƒ©ã‚¹
  * 
- * ‚±‚ÌƒNƒ‰ƒX‚ª¶¬‚·‚éƒNƒ‰ƒX‚ÍblancoDb‚ª¶¬‚µ‚½ƒ\[ƒXƒR[ƒh‚Å—˜—p‚³‚ê‚Ü‚·
+ * ã“ã®ã‚¯ãƒ©ã‚¹ãŒç”Ÿæˆã™ã‚‹ã‚¯ãƒ©ã‚¹ã¯blancoDbãŒç”Ÿæˆã—ãŸã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã§åˆ©ç”¨ã•ã‚Œã¾ã™
  * 
  * @author IGA Tosiki
  */
 public class NoRowFoundExceptionClassPhp {
     /**
-     * —áŠOƒNƒ‰ƒX‚ÌƒNƒ‰ƒX–¼
+     * ä¾‹å¤–ã‚¯ãƒ©ã‚¹ã®ã‚¯ãƒ©ã‚¹å
      */
     public static final String CLASS_NAME = "NoRowFoundException";
 
     /**
-     * ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÉŽ¦‚·JavaDocà–¾B
+     * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ç¤ºã™JavaDocèª¬æ˜Žã€‚
      */
-    private static final String CONSTRUCTOR_JAVADOC = "ƒf[ƒ^ƒx[ƒX‚Ìˆ—‚ÌŒ‹‰ÊA1s‚àƒf[ƒ^‚ªŒŸõ‚³‚ê‚È‚©‚Á‚½‚±‚Æ‚ðŽ¦‚·—áŠOƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ð¶¬‚µ‚Ü‚·B";
+    private static final String CONSTRUCTOR_JAVADOC = "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®å‡¦ç†ã®çµæžœã€1è¡Œã‚‚ãƒ‡ãƒ¼ã‚¿ãŒæ¤œç´¢ã•ã‚Œãªã‹ã£ãŸã“ã¨ã‚’ç¤ºã™ä¾‹å¤–ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ç”Ÿæˆã—ã¾ã™ã€‚";
 
     /**
-     * blancoCg ƒIƒuƒWƒFƒNƒgƒtƒ@ƒNƒgƒŠB
+     * blancoCg ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒ•ã‚¡ã‚¯ãƒˆãƒªã€‚
      */
     private BlancoCgObjectFactory fCgFactory = null;
 
     /**
-     * ‚±‚ÌƒNƒ‰ƒX‚ªŠÜ‚Ü‚ê‚éƒ\[ƒXƒR[ƒhB
+     * ã“ã®ã‚¯ãƒ©ã‚¹ãŒå«ã¾ã‚Œã‚‹ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã€‚
      */
     private BlancoCgSourceFile fCgSourceFile = null;
 
@@ -66,9 +66,9 @@ public class NoRowFoundExceptionClassPhp {
         {
             final List listDesc = cgClass.getLangDoc().getDescriptionList();
 
-            listDesc.add("ƒf[ƒ^ƒx[ƒX‚Ìˆ—‚ÌŒ‹‰ÊA1s‚àƒf[ƒ^‚ªŒŸõ‚³‚ê‚È‚©‚Á‚½‚±‚Æ‚ðŽ¦‚·—áŠOƒNƒ‰ƒX");
-            listDesc.add("‚±‚ÌƒNƒ‰ƒX‚ÍblancoDb‚ª¶¬‚µ‚½ƒ\[ƒXƒR[ƒh‚Å—˜—p‚³‚ê‚Ü‚·");
-            listDesc.add("¦‚±‚ÌƒNƒ‰ƒX‚ÍAƒ\[ƒXƒR[ƒhŽ©“®¶¬Œã‚Ìƒtƒ@ƒCƒ‹‚Æ‚µ‚Ä—˜—p‚³‚ê‚Ü‚·B");
+            listDesc.add("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®å‡¦ç†ã®çµæžœã€1è¡Œã‚‚ãƒ‡ãƒ¼ã‚¿ãŒæ¤œç´¢ã•ã‚Œãªã‹ã£ãŸã“ã¨ã‚’ç¤ºã™ä¾‹å¤–ã‚¯ãƒ©ã‚¹");
+            listDesc.add("ã“ã®ã‚¯ãƒ©ã‚¹ã¯blancoDbãŒç”Ÿæˆã—ãŸã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã§åˆ©ç”¨ã•ã‚Œã¾ã™");
+            listDesc.add("â€»ã“ã®ã‚¯ãƒ©ã‚¹ã¯ã€ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰è‡ªå‹•ç”Ÿæˆå¾Œã®ãƒ•ã‚¡ã‚¤ãƒ«ã¨ã—ã¦åˆ©ç”¨ã•ã‚Œã¾ã™ã€‚");
             listDesc.add("");
             listDesc.add("@author blanco Framework");
         }
@@ -82,12 +82,12 @@ public class NoRowFoundExceptionClassPhp {
             cgField.setFinal(true);
             cgField.setDefault("\"00100\"");
             cgField.getLangDoc().getDescriptionList().add(
-                    "‚±‚ÌƒNƒ‰ƒX‚ð•\Œ»‚·‚éSQLStateƒR[ƒhB");
+                    "ã“ã®ã‚¯ãƒ©ã‚¹ã‚’è¡¨ç¾ã™ã‚‹SQLStateã‚³ãƒ¼ãƒ‰ã€‚");
             cgField
                     .getLangDoc()
                     .getDescriptionList()
                     .add(
-                            "¦‚±‚ÌƒNƒ‰ƒX‚ð—˜—p‚·‚éÛ‚É‚ÍASQLState‚É‚Í—Š‚ç‚¸‚É—áŠOƒNƒ‰ƒX‚ÌŒ^‚É‚æ‚Á‚Äó‘Ô‚ð”»’f‚·‚é‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢B");
+                            "â€»ã“ã®ã‚¯ãƒ©ã‚¹ã‚’åˆ©ç”¨ã™ã‚‹éš›ã«ã¯ã€SQLStateã«ã¯é ¼ã‚‰ãšã«ä¾‹å¤–ã‚¯ãƒ©ã‚¹ã®åž‹ã«ã‚ˆã£ã¦çŠ¶æ…‹ã‚’åˆ¤æ–­ã™ã‚‹ã‚ˆã†ã«ã—ã¦ãã ã•ã„ã€‚");
         }
 
         {
@@ -97,7 +97,7 @@ public class NoRowFoundExceptionClassPhp {
 
             cgMethod.setConstructor(true);
             cgMethod.getParameterList().add(
-                    fCgFactory.createParameter("reason", "string", "—áŠO‚Ìà–¾"));
+                    fCgFactory.createParameter("reason", "string", "ä¾‹å¤–ã®èª¬æ˜Ž"));
 
             cgMethod
                     .setSuperclassInvocation("parent::__construct($reason . self::SQLSTATE_NOROWFOUND)");

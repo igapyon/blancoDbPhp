@@ -23,7 +23,7 @@ import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  * 
  * @author Tosiki Iga
  */
@@ -39,29 +39,29 @@ public class GetRowMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod("getRow",
-                "Œ»İ‚Ìs‚Ìƒf[ƒ^‚ğƒIƒuƒWƒFƒNƒg‚Æ‚µ‚Äæ“¾‚µ‚Ü‚·B");
+                "ç¾åœ¨ã®è¡Œã®ãƒ‡ãƒ¼ã‚¿ã‚’ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ã—ã¦å–å¾—ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         /*
-         * ƒVƒ“ƒOƒ‹‘®«‚ª—LŒø‚Å‚ ‚éê‡‚É‚Í protected‚Æ‚µ‚Ü‚·B
+         * ã‚·ãƒ³ã‚°ãƒ«å±æ€§ãŒæœ‰åŠ¹ã§ã‚ã‚‹å ´åˆã«ã¯ protectedã¨ã—ã¾ã™ã€‚
          */
         if (fSqlInfo.getSingle()) {
             cgMethod.setAccess("protected");
         }
 
-        // sƒIƒuƒWƒFƒNƒg‚ÌŒ^–¼‚ğæ“¾‚µ‚Ü‚·B
+        // è¡Œã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹åã‚’å–å¾—ã—ã¾ã™ã€‚
         final String rowObjectType = fDbSetting.getBasePackage() + ".row."
                 + BlancoNameAdjuster.toClassName(fSqlInfo.getName()) + "Row";
 
-        cgMethod.setReturn(fCgFactory.createReturn(rowObjectType, "sƒIƒuƒWƒFƒNƒg"));
+        cgMethod.setReturn(fCgFactory.createReturn(rowObjectType, "è¡Œã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ"));
 
         final List listDesc = cgMethod.getLangDoc().getDescriptionList();
 
         if (fSqlInfo.getSingle()) {
-            listDesc.add("ƒVƒ“ƒOƒ‹‘®«‚ª—LŒø‚È‚Ì‚ÅƒXƒR[ƒv‚ğprotected‚Æ‚µ‚Ü‚·B");
-            listDesc.add("‚±‚Ìƒƒ\ƒbƒh‚Ì‘ã‚í‚è‚É GetSingleRowƒƒ\ƒbƒh‚ğ—˜—p‚µ‚Ä‚­‚¾‚³‚¢B");
+            listDesc.add("ã‚·ãƒ³ã‚°ãƒ«å±æ€§ãŒæœ‰åŠ¹ãªã®ã§ã‚¹ã‚³ãƒ¼ãƒ—ã‚’protectedã¨ã—ã¾ã™ã€‚");
+            listDesc.add("ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ä»£ã‚ã‚Šã« GetSingleRowãƒ¡ã‚½ãƒƒãƒ‰ã‚’åˆ©ç”¨ã—ã¦ãã ã•ã„ã€‚");
         } else {
-            listDesc.add("‚±‚Ìƒƒ\ƒbƒh‚ğŒÄ‚Ño‚·‘O‚ÉAnext()‚È‚Ç‚ÌƒJ[ƒ\ƒ‹‚ğ‘€ì‚·‚éƒƒ\ƒbƒh‚ğŒÄ‚Ño‚·•K—v‚ª‚ ‚è‚Ü‚·B");
+            listDesc.add("ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã™å‰ã«ã€next()ãªã©ã®ã‚«ãƒ¼ã‚½ãƒ«ã‚’æ“ä½œã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã™å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚");
         }
 
         final List listLine = cgMethod.getLineList();

@@ -20,7 +20,7 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ð“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class ExecuteQueryMethodPhp extends BlancoDbAbstractMethod {
     public ExecuteQueryMethodPhp(final BlancoDbSetting argDbSetting,
@@ -37,16 +37,16 @@ public class ExecuteQueryMethodPhp extends BlancoDbAbstractMethod {
                 null);
         fCgClass.getMethodList().add(cgMethod);
 
-        cgMethod.getLangDoc().getDescriptionList().add("ŒŸõŒ^ƒNƒGƒŠ‚ðŽÀs‚µ‚Ü‚·B");
+        cgMethod.getLangDoc().getDescriptionList().add("æ¤œç´¢åž‹ã‚¯ã‚¨ãƒªã‚’å®Ÿè¡Œã—ã¾ã™ã€‚");
 
         final List listLine = cgMethod.getLineList();
 
-        // statement‚ª–¢Šm•Û‚Å‚ ‚é‚Î‚ ‚¢A‹­§“I‚ÉprepareStatement‚ðŒÄ‚Ño‚µ‚Ü‚·B
+        // statementãŒæœªç¢ºä¿ã§ã‚ã‚‹ã°ã‚ã„ã€å¼·åˆ¶çš„ã«prepareStatementã‚’å‘¼ã³å‡ºã—ã¾ã™ã€‚
         listLine.add("if ($this->fStatement == NULL) {");
         listLine.add("$this->prepareStatement();");
         listLine.add("}");
 
-        listLine.add("// TODO —áŠOˆ—‚ªŽÀ‘•‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB");
+        listLine.add("// TODO ä¾‹å¤–å‡¦ç†ãŒå®Ÿè£…ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚");
         listLine.add("$result = $this->fStatement->execute();");
     }
 }

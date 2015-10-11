@@ -1,5 +1,5 @@
 /*
- * ���̃\�[�X�R�[�h�� blanco Framework�ɂ�莩����������܂����B
+ * このソースコードは blanco Frameworkにより自動生成されました。
  */
 package blanco.db.task;
 
@@ -9,13 +9,13 @@ import org.apache.tools.ant.Task;
 import blanco.db.task.valueobject.BlancoDbPhpProcessInput;
 
 /**
- * Apache Ant�^�X�N [BlancoDbPhp]�̃N���X�B
+ * Apache Antタスク [BlancoDbPhp]のクラス。
  *
- * R/O�}�b�s���O�����������s�� BlancoDbPhp ��AntTask�ł��B<br>
- * ���̃N���X�ł́AApache Ant�^�X�N�ň�ʓI�ɕK�v�ȃ`�F�b�N�Ȃǂ̃R�[�f�B���O�������肵�܂��B
- * ���ۂ̏����� �p�b�P�[�W[blanco.db.task]��BlancoDbPhpBatchProcess�N���X���쐬���ċL�q���Ă��������B<br>
+ * R/Oマッピング自動生成を行う BlancoDbPhp のAntTaskです。<br>
+ * このクラスでは、Apache Antタスクで一般的に必要なチェックなどのコーディングを肩代わりします。
+ * 実際の処理は パッケージ[blanco.db.task]にBlancoDbPhpBatchProcessクラスを作成して記述してください。<br>
  * <br>
- * Ant�^�X�N�ւ̑g�ݍ��ݗ�<br>
+ * Antタスクへの組み込み例<br>
  * <pre>
  * &lt;taskdef name=&quot;blancodbphp&quot; classname=&quot;blanco.db.task.BlancoDbPhpTask">
  *     &lt;classpath&gt;
@@ -27,120 +27,120 @@ import blanco.db.task.valueobject.BlancoDbPhpProcessInput;
  */
 public class BlancoDbPhpTask extends Task {
     /**
-     * R/O�}�b�s���O�����������s�� BlancoDbPhp ��AntTask�ł��B
+     * R/Oマッピング自動生成を行う BlancoDbPhp のAntTaskです。
      */
     protected BlancoDbPhpProcessInput fInput = new BlancoDbPhpProcessInput();
 
     /**
-     * �t�B�[���h [jdbcdriver] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [jdbcdriver] に値がセットされたかどうか。
      */
     protected boolean fIsFieldJdbcdriverProcessed = false;
 
     /**
-     * �t�B�[���h [jdbcurl] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [jdbcurl] に値がセットされたかどうか。
      */
     protected boolean fIsFieldJdbcurlProcessed = false;
 
     /**
-     * �t�B�[���h [jdbcuser] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [jdbcuser] に値がセットされたかどうか。
      */
     protected boolean fIsFieldJdbcuserProcessed = false;
 
     /**
-     * �t�B�[���h [jdbcpassword] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [jdbcpassword] に値がセットされたかどうか。
      */
     protected boolean fIsFieldJdbcpasswordProcessed = false;
 
     /**
-     * �t�B�[���h [jdbcdriverfile] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [jdbcdriverfile] に値がセットされたかどうか。
      */
     protected boolean fIsFieldJdbcdriverfileProcessed = false;
 
     /**
-     * �t�B�[���h [metadir] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [metadir] に値がセットされたかどうか。
      */
     protected boolean fIsFieldMetadirProcessed = false;
 
     /**
-     * �t�B�[���h [tmpdir] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [tmpdir] に値がセットされたかどうか。
      */
     protected boolean fIsFieldTmpdirProcessed = false;
 
     /**
-     * �t�B�[���h [targetdir] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [targetdir] に値がセットされたかどうか。
      */
     protected boolean fIsFieldTargetdirProcessed = false;
 
     /**
-     * �t�B�[���h [basepackage] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [basepackage] に値がセットされたかどうか。
      */
     protected boolean fIsFieldBasepackageProcessed = false;
 
     /**
-     * �t�B�[���h [runtimepackage] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [runtimepackage] に値がセットされたかどうか。
      */
     protected boolean fIsFieldRuntimepackageProcessed = false;
 
     /**
-     * �t�B�[���h [schema] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [schema] に値がセットされたかどうか。
      */
     protected boolean fIsFieldSchemaProcessed = false;
 
     /**
-     * �t�B�[���h [table] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [table] に値がセットされたかどうか。
      */
     protected boolean fIsFieldTableProcessed = false;
 
     /**
-     * �t�B�[���h [sql] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [sql] に値がセットされたかどうか。
      */
     protected boolean fIsFieldSqlProcessed = false;
 
     /**
-     * �t�B�[���h [log] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [log] に値がセットされたかどうか。
      */
     protected boolean fIsFieldLogProcessed = false;
 
     /**
-     * �t�B�[���h [executesql] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [executesql] に値がセットされたかどうか。
      */
     protected boolean fIsFieldExecutesqlProcessed = false;
 
     /**
-     * �t�B�[���h [encoding] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [encoding] に値がセットされたかどうか。
      */
     protected boolean fIsFieldEncodingProcessed = false;
 
     /**
-     * �t�B�[���h [cache] �ɒl���Z�b�g���ꂽ���ǂ����B
+     * フィールド [cache] に値がセットされたかどうか。
      */
     protected boolean fIsFieldCacheProcessed = false;
 
     /**
-     * verbose���[�h�œ��삳���邩�ǂ����B
+     * verboseモードで動作させるかどうか。
      *
-     * @param arg verbose���[�h�œ��삳���邩�ǂ����B
+     * @param arg verboseモードで動作させるかどうか。
      */
     public void setVerbose(final boolean arg) {
         fInput.setVerbose(arg);
     }
 
     /**
-     * verbose���[�h�œ��삳���邩�ǂ����B
+     * verboseモードで動作させるかどうか。
      *
-     * @return verbose���[�h�œ��삳���邩�ǂ����B
+     * @return verboseモードで動作させるかどうか。
      */
     public boolean getVerbose() {
         return fInput.getVerbose();
     }
 
     /**
-     * Ant�^�X�N��[jdbcdriver]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[jdbcdriver]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 1<br>
-     * JDBC�h���C�o�̃N���X�����w�肵�܂��B<br>
+     * 項目番号: 1<br>
+     * JDBCドライバのクラス名を指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setJdbcdriver(final String arg) {
         fInput.setJdbcdriver(arg);
@@ -148,25 +148,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[jdbcdriver]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[jdbcdriver]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 1<br>
-     * JDBC�h���C�o�̃N���X�����w�肵�܂��B<br>
-     * �K�{�A�g���r���[�g�ł��BApache Ant�^�X�N��ŕK���l���w�肳��܂��B<br>
+     * 項目番号: 1<br>
+     * JDBCドライバのクラス名を指定します。<br>
+     * 必須アトリビュートです。Apache Antタスク上で必ず値が指定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getJdbcdriver() {
         return fInput.getJdbcdriver();
     }
 
     /**
-     * Ant�^�X�N��[jdbcurl]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[jdbcurl]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 2<br>
-     * JDBC�ڑ���URL���w�肵�܂��B<br>
+     * 項目番号: 2<br>
+     * JDBC接続先URLを指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setJdbcurl(final String arg) {
         fInput.setJdbcurl(arg);
@@ -174,25 +174,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[jdbcurl]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[jdbcurl]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 2<br>
-     * JDBC�ڑ���URL���w�肵�܂��B<br>
-     * �K�{�A�g���r���[�g�ł��BApache Ant�^�X�N��ŕK���l���w�肳��܂��B<br>
+     * 項目番号: 2<br>
+     * JDBC接続先URLを指定します。<br>
+     * 必須アトリビュートです。Apache Antタスク上で必ず値が指定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getJdbcurl() {
         return fInput.getJdbcurl();
     }
 
     /**
-     * Ant�^�X�N��[jdbcuser]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[jdbcuser]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 3<br>
-     * JDBC�f�[�^�x�[�X�ڑ����s���ۂ̃��[�U�����w�肵�܂��B<br>
+     * 項目番号: 3<br>
+     * JDBCデータベース接続を行う際のユーザ名を指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setJdbcuser(final String arg) {
         fInput.setJdbcuser(arg);
@@ -200,25 +200,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[jdbcuser]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[jdbcuser]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 3<br>
-     * JDBC�f�[�^�x�[�X�ڑ����s���ۂ̃��[�U�����w�肵�܂��B<br>
-     * �K�{�A�g���r���[�g�ł��BApache Ant�^�X�N��ŕK���l���w�肳��܂��B<br>
+     * 項目番号: 3<br>
+     * JDBCデータベース接続を行う際のユーザ名を指定します。<br>
+     * 必須アトリビュートです。Apache Antタスク上で必ず値が指定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getJdbcuser() {
         return fInput.getJdbcuser();
     }
 
     /**
-     * Ant�^�X�N��[jdbcpassword]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[jdbcpassword]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 4<br>
-     * JDBC�f�[�^�x�[�X�ڑ����s���ۂ̃p�X���[�h���w�肵�܂��B<br>
+     * 項目番号: 4<br>
+     * JDBCデータベース接続を行う際のパスワードを指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setJdbcpassword(final String arg) {
         fInput.setJdbcpassword(arg);
@@ -226,25 +226,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[jdbcpassword]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[jdbcpassword]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 4<br>
-     * JDBC�f�[�^�x�[�X�ڑ����s���ۂ̃p�X���[�h���w�肵�܂��B<br>
-     * �K�{�A�g���r���[�g�ł��BApache Ant�^�X�N��ŕK���l���w�肳��܂��B<br>
+     * 項目番号: 4<br>
+     * JDBCデータベース接続を行う際のパスワードを指定します。<br>
+     * 必須アトリビュートです。Apache Antタスク上で必ず値が指定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getJdbcpassword() {
         return fInput.getJdbcpassword();
     }
 
     /**
-     * Ant�^�X�N��[jdbcdriverfile]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[jdbcdriverfile]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 5<br>
-     * JDBC�h���C�o�� jar �t�@�C�������w�肵�܂��B�ʏ�͗��p���܂���B<br>
+     * 項目番号: 5<br>
+     * JDBCドライバの jar ファイル名を指定します。通常は利用しません。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setJdbcdriverfile(final String arg) {
         fInput.setJdbcdriverfile(arg);
@@ -252,24 +252,24 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[jdbcdriverfile]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[jdbcdriverfile]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 5<br>
-     * JDBC�h���C�o�� jar �t�@�C�������w�肵�܂��B�ʏ�͗��p���܂���B<br>
+     * 項目番号: 5<br>
+     * JDBCドライバの jar ファイル名を指定します。通常は利用しません。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getJdbcdriverfile() {
         return fInput.getJdbcdriverfile();
     }
 
     /**
-     * Ant�^�X�N��[metadir]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[metadir]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 6<br>
-     * SQL��`���^�t�@�C�����i�[����Ă���f�B���N�g�����w�肵�܂��B<br>
+     * 項目番号: 6<br>
+     * SQL定義メタファイルが格納されているディレクトリを指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setMetadir(final String arg) {
         fInput.setMetadir(arg);
@@ -277,25 +277,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[metadir]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[metadir]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 6<br>
-     * SQL��`���^�t�@�C�����i�[����Ă���f�B���N�g�����w�肵�܂��B<br>
-     * �K�{�A�g���r���[�g�ł��BApache Ant�^�X�N��ŕK���l���w�肳��܂��B<br>
+     * 項目番号: 6<br>
+     * SQL定義メタファイルが格納されているディレクトリを指定します。<br>
+     * 必須アトリビュートです。Apache Antタスク上で必ず値が指定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getMetadir() {
         return fInput.getMetadir();
     }
 
     /**
-     * Ant�^�X�N��[tmpdir]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[tmpdir]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 7<br>
-     * �e���|�����t�H���_���w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������tmp�t�H���_�𗘗p���܂��B<br>
+     * 項目番号: 7<br>
+     * テンポラリフォルダを指定します。無指定の場合にはカレント直下のtmpフォルダを利用します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setTmpdir(final String arg) {
         fInput.setTmpdir(arg);
@@ -303,25 +303,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[tmpdir]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[tmpdir]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 7<br>
-     * �e���|�����t�H���_���w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������tmp�t�H���_�𗘗p���܂��B<br>
-     * �f�t�H���g�l[tmp]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 7<br>
+     * テンポラリフォルダを指定します。無指定の場合にはカレント直下のtmpフォルダを利用します。<br>
+     * デフォルト値[tmp]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getTmpdir() {
         return fInput.getTmpdir();
     }
 
     /**
-     * Ant�^�X�N��[targetdir]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[targetdir]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 8<br>
-     * BlancoDb��PHP�\�[�X�R�[�h���o�͂���f�B���N�g�����w�肵�܂��B<br>
+     * 項目番号: 8<br>
+     * BlancoDbがPHPソースコードを出力するディレクトリを指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setTargetdir(final String arg) {
         fInput.setTargetdir(arg);
@@ -329,25 +329,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[targetdir]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[targetdir]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 8<br>
-     * BlancoDb��PHP�\�[�X�R�[�h���o�͂���f�B���N�g�����w�肵�܂��B<br>
-     * �f�t�H���g�l[blanco.php]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 8<br>
+     * BlancoDbがPHPソースコードを出力するディレクトリを指定します。<br>
+     * デフォルト値[blanco.php]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getTargetdir() {
         return fInput.getTargetdir();
     }
 
     /**
-     * Ant�^�X�N��[basepackage]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[basepackage]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 9<br>
-     * BlancoDb��PHP�\�[�X�R�[�h�𐶐�����ۂ̊�ƂȂ�p�b�P�[�W�����w�肵�܂��B<br>
+     * 項目番号: 9<br>
+     * BlancoDbがPHPソースコードを生成する際の基準となるパッケージ名を指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setBasepackage(final String arg) {
         fInput.setBasepackage(arg);
@@ -355,25 +355,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[basepackage]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[basepackage]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 9<br>
-     * BlancoDb��PHP�\�[�X�R�[�h�𐶐�����ۂ̊�ƂȂ�p�b�P�[�W�����w�肵�܂��B<br>
-     * �K�{�A�g���r���[�g�ł��BApache Ant�^�X�N��ŕK���l���w�肳��܂��B<br>
+     * 項目番号: 9<br>
+     * BlancoDbがPHPソースコードを生成する際の基準となるパッケージ名を指定します。<br>
+     * 必須アトリビュートです。Apache Antタスク上で必ず値が指定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getBasepackage() {
         return fInput.getBasepackage();
     }
 
     /**
-     * Ant�^�X�N��[runtimepackage]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[runtimepackage]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 10<br>
-     * �����^�C���N���X�𐶐����鐶������w�肵�܂��B���w��̏ꍇ�ɂ� basepackage����ɐ�������܂��B<br>
+     * 項目番号: 10<br>
+     * ランタイムクラスを生成する生成先を指定します。無指定の場合には basepackageを基準に生成されます。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setRuntimepackage(final String arg) {
         fInput.setRuntimepackage(arg);
@@ -381,24 +381,24 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[runtimepackage]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[runtimepackage]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 10<br>
-     * �����^�C���N���X�𐶐����鐶������w�肵�܂��B���w��̏ꍇ�ɂ� basepackage����ɐ�������܂��B<br>
+     * 項目番号: 10<br>
+     * ランタイムクラスを生成する生成先を指定します。無指定の場合には basepackageを基準に生成されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getRuntimepackage() {
         return fInput.getRuntimepackage();
     }
 
     /**
-     * Ant�^�X�N��[schema]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[schema]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 11<br>
-     * �P��\�����擾����ۂ̃X�L�[�}���B��{�I�ɖ��w��ł��B������Oracle�̏ꍇ�ɂ̂݁A���[�U����啶�����������̂��w�肵�܂��BOracle�̏ꍇ�� ������w�肵�Ȃ��ƁA�V�X�e���\�܂Ō������Ă��܂��s����������邽�߂ł��B�������_�ł̓T�|�[�g����Ȃ��I�v�V�����ł��B<br>
+     * 項目番号: 11<br>
+     * 単一表情報を取得する際のスキーマ名。基本的に無指定です。ただしOracleの場合にのみ、ユーザ名を大文字化したものを指定します。Oracleの場合に これを指定しないと、システム表まで検索してしまい不具合が発生するためです。※現時点ではサポートされないオプションです。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setSchema(final String arg) {
         fInput.setSchema(arg);
@@ -406,24 +406,24 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[schema]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[schema]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 11<br>
-     * �P��\�����擾����ۂ̃X�L�[�}���B��{�I�ɖ��w��ł��B������Oracle�̏ꍇ�ɂ̂݁A���[�U����啶�����������̂��w�肵�܂��BOracle�̏ꍇ�� ������w�肵�Ȃ��ƁA�V�X�e���\�܂Ō������Ă��܂��s����������邽�߂ł��B�������_�ł̓T�|�[�g����Ȃ��I�v�V�����ł��B<br>
+     * 項目番号: 11<br>
+     * 単一表情報を取得する際のスキーマ名。基本的に無指定です。ただしOracleの場合にのみ、ユーザ名を大文字化したものを指定します。Oracleの場合に これを指定しないと、システム表まで検索してしまい不具合が発生するためです。※現時点ではサポートされないオプションです。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getSchema() {
         return fInput.getSchema();
     }
 
     /**
-     * Ant�^�X�N��[table]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[table]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 12<br>
-     * true��ݒ肷��ƒP��\�̂��߂̃A�N�Z�T�E�R�[�h�𐶐����܂��B<br>
+     * 項目番号: 12<br>
+     * trueを設定すると単一表のためのアクセサ・コードを生成します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setTable(final String arg) {
         fInput.setTable(arg);
@@ -431,25 +431,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[table]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[table]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 12<br>
-     * true��ݒ肷��ƒP��\�̂��߂̃A�N�Z�T�E�R�[�h�𐶐����܂��B<br>
-     * �f�t�H���g�l[false]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 12<br>
+     * trueを設定すると単一表のためのアクセサ・コードを生成します。<br>
+     * デフォルト値[false]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getTable() {
         return fInput.getTable();
     }
 
     /**
-     * Ant�^�X�N��[sql]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[sql]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 13<br>
-     * true��ݒ肷���SQL��`����R�[�h�𐶐����܂��B<br>
+     * 項目番号: 13<br>
+     * trueを設定するとSQL定義からコードを生成します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setSql(final String arg) {
         fInput.setSql(arg);
@@ -457,25 +457,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[sql]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[sql]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 13<br>
-     * true��ݒ肷���SQL��`����R�[�h�𐶐����܂��B<br>
-     * �f�t�H���g�l[false]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 13<br>
+     * trueを設定するとSQL定義からコードを生成します。<br>
+     * デフォルト値[false]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getSql() {
         return fInput.getSql();
     }
 
     /**
-     * Ant�^�X�N��[log]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[log]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 14<br>
-     * True��ݒ肷��ƃ��M���O�R�[�h�𐶐����܂��B�������_�ł̓T�|�[�g����Ȃ��I�v�V�����ł��B<br>
+     * 項目番号: 14<br>
+     * Trueを設定するとロギングコードを生成します。※現時点ではサポートされないオプションです。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setLog(final String arg) {
         fInput.setLog(arg);
@@ -483,25 +483,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[log]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[log]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 14<br>
-     * True��ݒ肷��ƃ��M���O�R�[�h�𐶐����܂��B�������_�ł̓T�|�[�g����Ȃ��I�v�V�����ł��B<br>
-     * �f�t�H���g�l[false]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 14<br>
+     * Trueを設定するとロギングコードを生成します。※現時点ではサポートされないオプションです。<br>
+     * デフォルト値[false]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getLog() {
         return fInput.getLog();
     }
 
     /**
-     * Ant�^�X�N��[executesql]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[executesql]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 17<br>
-     * �\�[�X�R�[�h������������SQL��`��SQL�������s���邩�ǂ�����ݒ肷��t���O�B�f�t�H���g�� iterator�Biterator:�����^�̂�SQL�������s���Č��؂���Bnone:SQL���͎��s���Ȃ��B<br>
+     * 項目番号: 17<br>
+     * ソースコード自動生成時にSQL定義のSQL文を実行するかどうかを設定するフラグ。デフォルトは iterator。iterator:検索型のみSQL文を実行して検証する。none:SQL文は実行しない。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setExecutesql(final String arg) {
         fInput.setExecutesql(arg);
@@ -509,25 +509,25 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[executesql]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[executesql]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 17<br>
-     * �\�[�X�R�[�h������������SQL��`��SQL�������s���邩�ǂ�����ݒ肷��t���O�B�f�t�H���g�� iterator�Biterator:�����^�̂�SQL�������s���Č��؂���Bnone:SQL���͎��s���Ȃ��B<br>
-     * �f�t�H���g�l[iterator]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 17<br>
+     * ソースコード自動生成時にSQL定義のSQL文を実行するかどうかを設定するフラグ。デフォルトは iterator。iterator:検索型のみSQL文を実行して検証する。none:SQL文は実行しない。<br>
+     * デフォルト値[iterator]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getExecutesql() {
         return fInput.getExecutesql();
     }
 
     /**
-     * Ant�^�X�N��[encoding]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[encoding]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 18<br>
-     * ������������\�[�X�t�@�C���̕����G���R�[�f�B���O���w�肵�܂��B<br>
+     * 項目番号: 18<br>
+     * 自動生成するソースファイルの文字エンコーディングを指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setEncoding(final String arg) {
         fInput.setEncoding(arg);
@@ -535,24 +535,24 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[encoding]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[encoding]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 18<br>
-     * ������������\�[�X�t�@�C���̕����G���R�[�f�B���O���w�肵�܂��B<br>
+     * 項目番号: 18<br>
+     * 自動生成するソースファイルの文字エンコーディングを指定します。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getEncoding() {
         return fInput.getEncoding();
     }
 
     /**
-     * Ant�^�X�N��[cache]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[cache]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 19<br>
-     * ��`�����^�t�@�C�����璆��XML�t�@�C���ւ̕ϊ����L���b�V���ōς܂����ǂ����̃t���O�B<br>
+     * 項目番号: 19<br>
+     * 定義書メタファイルから中間XMLファイルへの変換をキャッシュで済ますかどうかのフラグ。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setCache(final String arg) {
         fInput.setCache(arg);
@@ -560,50 +560,50 @@ public class BlancoDbPhpTask extends Task {
     }
 
     /**
-     * Ant�^�X�N��[cache]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[cache]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 19<br>
-     * ��`�����^�t�@�C�����璆��XML�t�@�C���ւ̕ϊ����L���b�V���ōς܂����ǂ����̃t���O�B<br>
-     * �f�t�H���g�l[false]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 19<br>
+     * 定義書メタファイルから中間XMLファイルへの変換をキャッシュで済ますかどうかのフラグ。<br>
+     * デフォルト値[false]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getCache() {
         return fInput.getCache();
     }
 
     /**
-     * Ant�^�X�N�̃��C�������BApache Ant���� ���̃��\�b�h���Ăяo����܂��B
+     * Antタスクのメイン処理。Apache Antから このメソッドが呼び出されます。
      *
-     * @throws BuildException �^�X�N�Ƃ��Ă̗�O�����������ꍇ�B
+     * @throws BuildException タスクとしての例外が発生した場合。
      */
     @Override
     public final void execute() throws BuildException {
         System.out.println("BlancoDbPhpTask begin.");
 
-        // ���ڔԍ�[1]�A�A�g���r���[�g[jdbcdriver]�͕K�{���͂ł��B���̓`�F�b�N���s���܂��B
+        // 項目番号[1]、アトリビュート[jdbcdriver]は必須入力です。入力チェックを行います。
         if (fIsFieldJdbcdriverProcessed == false) {
-            throw new BuildException("�K�{�A�g���r���[�g[jdbcdriver]���ݒ肳��Ă��܂���B�����𒆒f���܂��B");
+            throw new BuildException("必須アトリビュート[jdbcdriver]が設定されていません。処理を中断します。");
         }
-        // ���ڔԍ�[2]�A�A�g���r���[�g[jdbcurl]�͕K�{���͂ł��B���̓`�F�b�N���s���܂��B
+        // 項目番号[2]、アトリビュート[jdbcurl]は必須入力です。入力チェックを行います。
         if (fIsFieldJdbcurlProcessed == false) {
-            throw new BuildException("�K�{�A�g���r���[�g[jdbcurl]���ݒ肳��Ă��܂���B�����𒆒f���܂��B");
+            throw new BuildException("必須アトリビュート[jdbcurl]が設定されていません。処理を中断します。");
         }
-        // ���ڔԍ�[3]�A�A�g���r���[�g[jdbcuser]�͕K�{���͂ł��B���̓`�F�b�N���s���܂��B
+        // 項目番号[3]、アトリビュート[jdbcuser]は必須入力です。入力チェックを行います。
         if (fIsFieldJdbcuserProcessed == false) {
-            throw new BuildException("�K�{�A�g���r���[�g[jdbcuser]���ݒ肳��Ă��܂���B�����𒆒f���܂��B");
+            throw new BuildException("必須アトリビュート[jdbcuser]が設定されていません。処理を中断します。");
         }
-        // ���ڔԍ�[4]�A�A�g���r���[�g[jdbcpassword]�͕K�{���͂ł��B���̓`�F�b�N���s���܂��B
+        // 項目番号[4]、アトリビュート[jdbcpassword]は必須入力です。入力チェックを行います。
         if (fIsFieldJdbcpasswordProcessed == false) {
-            throw new BuildException("�K�{�A�g���r���[�g[jdbcpassword]���ݒ肳��Ă��܂���B�����𒆒f���܂��B");
+            throw new BuildException("必須アトリビュート[jdbcpassword]が設定されていません。処理を中断します。");
         }
-        // ���ڔԍ�[6]�A�A�g���r���[�g[metadir]�͕K�{���͂ł��B���̓`�F�b�N���s���܂��B
+        // 項目番号[6]、アトリビュート[metadir]は必須入力です。入力チェックを行います。
         if (fIsFieldMetadirProcessed == false) {
-            throw new BuildException("�K�{�A�g���r���[�g[metadir]���ݒ肳��Ă��܂���B�����𒆒f���܂��B");
+            throw new BuildException("必須アトリビュート[metadir]が設定されていません。処理を中断します。");
         }
-        // ���ڔԍ�[9]�A�A�g���r���[�g[basepackage]�͕K�{���͂ł��B���̓`�F�b�N���s���܂��B
+        // 項目番号[9]、アトリビュート[basepackage]は必須入力です。入力チェックを行います。
         if (fIsFieldBasepackageProcessed == false) {
-            throw new BuildException("�K�{�A�g���r���[�g[basepackage]���ݒ肳��Ă��܂���B�����𒆒f���܂��B");
+            throw new BuildException("必須アトリビュート[basepackage]が設定されていません。処理を中断します。");
         }
 
         if (getVerbose()) {
@@ -628,11 +628,11 @@ public class BlancoDbPhpTask extends Task {
         }
 
         try {
-            // ���ۂ�Ant�^�X�N�̎又�������s���܂��B
-            // ���̉ӏ��ŃR���p�C���G���[����������ꍇ�ABlancoDbPhpProcess�C���^�t�F�[�X���������� blanco.db.task�p�b�P�[�W�� BlancoDbPhpProcessImpl�N���X���쐬���邱�Ƃɂ������ł���ꍇ������܂��B
+            // 実際のAntタスクの主処理を実行します。
+            // この箇所でコンパイルエラーが発生する場合、BlancoDbPhpProcessインタフェースを実装して blanco.db.taskパッケージに BlancoDbPhpProcessImplクラスを作成することにより解決できる場合があります。
             final BlancoDbPhpProcess proc = new BlancoDbPhpProcessImpl();
             if (proc.execute(fInput) != BlancoDbPhpBatchProcess.END_SUCCESS) {
-                throw new BuildException("�^�X�N�ُ͈�I�����܂����B");
+                throw new BuildException("タスクは異常終了しました。");
             }
         } catch (IllegalArgumentException e) {
             if (getVerbose()) {
@@ -641,10 +641,10 @@ public class BlancoDbPhpTask extends Task {
             throw new BuildException(e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
-            throw new BuildException("�^�X�N���������ɗ�O���������܂����B�����𒆒f���܂��B" + e.toString());
+            throw new BuildException("タスクを処理中に例外が発生しました。処理を中断します。" + e.toString());
         } catch (Error e) {
             e.printStackTrace();
-            throw new BuildException("�^�X�N���������ɃG���[���������܂����B�����𒆒f���܂��B" + e.toString());
+            throw new BuildException("タスクを処理中にエラーが発生しました。処理を中断します。" + e.toString());
         }
     }
 }

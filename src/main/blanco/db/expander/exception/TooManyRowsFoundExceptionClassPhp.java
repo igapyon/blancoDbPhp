@@ -18,30 +18,30 @@ import blanco.cg.valueobject.BlancoCgMethod;
 import blanco.cg.valueobject.BlancoCgSourceFile;
 
 /**
- * �f�[�^�x�[�X�̏����̌��ʁA1�s�𒴂���f�[�^����������Ă��܂������Ƃ�������O�N���X
+ * データベースの処理の結果、1行を超えるデータが検索されてしまったことを示す例外クラス
  * 
- * ���̃N���X����������N���X��blancoDb�����������\�[�X�R�[�h�ŗ��p����܂�
+ * このクラスが生成するクラスはblancoDbが生成したソースコードで利用されます
  * 
  * @author IGA Tosiki
  */
 public class TooManyRowsFoundExceptionClassPhp {
     /**
-     * ��O�N���X�̃N���X��
+     * 例外クラスのクラス名
      */
     public static final String CLASS_NAME = "TooManyRowsFoundException";
 
     /**
-     * �R���X�g���N�^�Ɏ���JavaDoc�����B
+     * コンストラクタに示すJavaDoc説明。
      */
-    private static final String CONSTRUCTOR_JAVADOC = "�f�[�^�x�[�X�̏����̌��ʁA1�s�𒴂���f�[�^����������Ă��܂������Ƃ�������O�N���X�̃C���X�^���X�𐶐����܂��B";
+    private static final String CONSTRUCTOR_JAVADOC = "データベースの処理の結果、1行を超えるデータが検索されてしまったことを示す例外クラスのインスタンスを生成します。";
 
     /**
-     * blancoCg �I�u�W�F�N�g�t�@�N�g���B
+     * blancoCg オブジェクトファクトリ。
      */
     private BlancoCgObjectFactory fCgFactory = null;
 
     /**
-     * ���̃N���X���܂܂��\�[�X�R�[�h�B
+     * このクラスが含まれるソースコード。
      */
     private BlancoCgSourceFile fCgSourceFile = null;
 
@@ -66,9 +66,9 @@ public class TooManyRowsFoundExceptionClassPhp {
         {
             final List listDesc = cgClass.getLangDoc().getDescriptionList();
 
-            listDesc.add("�f�[�^�x�[�X�̏����̌��ʁA1�s�𒴂���f�[�^����������Ă��܂������Ƃ�������O�N���X");
-            listDesc.add("���̃N���X��blancoDb�����������\�[�X�R�[�h�ŗ��p����܂�");
-            listDesc.add("�����̃N���X�́A�\�[�X�R�[�h����������̃t�@�C���Ƃ��ė��p����܂��B");
+            listDesc.add("データベースの処理の結果、1行を超えるデータが検索されてしまったことを示す例外クラス");
+            listDesc.add("このクラスはblancoDbが生成したソースコードで利用されます");
+            listDesc.add("※このクラスは、ソースコード自動生成後のファイルとして利用されます。");
             listDesc.add("");
             listDesc.add("@author blanco Framework");
         }
@@ -82,12 +82,12 @@ public class TooManyRowsFoundExceptionClassPhp {
             cgField.setFinal(true);
             cgField.setDefault("\"00111\"");
             cgField.getLangDoc().getDescriptionList().add(
-                    "���̃N���X��\������SQLState�R�[�h�B");
+                    "このクラスを表現するSQLStateコード。");
             cgField
                     .getLangDoc()
                     .getDescriptionList()
                     .add(
-                            "�����̃N���X�𗘗p����ۂɂ́ASQLState�ɂ͗��炸�ɗ�O�N���X�̌^�ɂ���ď�Ԃ𔻒f����悤�ɂ��Ă��������B");
+                            "※このクラスを利用する際には、SQLStateには頼らずに例外クラスの型によって状態を判断するようにしてください。");
         }
 
         {
@@ -97,7 +97,7 @@ public class TooManyRowsFoundExceptionClassPhp {
 
             cgMethod.setConstructor(true);
             cgMethod.getParameterList().add(
-                    fCgFactory.createParameter("reason", "string", "��O�̐���"));
+                    fCgFactory.createParameter("reason", "string", "例外の説明"));
 
             cgMethod
                     .setSuperclassInvocation("parent::__construct($reason . self::SQLSTATE_TOOMANYROWSFOUND)");

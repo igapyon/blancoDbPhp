@@ -20,7 +20,7 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class CloseMethodPhp extends BlancoDbAbstractMethod {
     public CloseMethodPhp(final BlancoDbSetting argDbSetting,
@@ -34,11 +34,11 @@ public class CloseMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod("close",
-                "—˜—p‚³‚ê‚Ä‚¢‚½ƒf[ƒ^ƒx[ƒXƒŠƒ\[ƒX‚ğŠJ•ú‚µ‚Ü‚·B");
+                "åˆ©ç”¨ã•ã‚Œã¦ã„ãŸãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒªã‚½ãƒ¼ã‚¹ã‚’é–‹æ”¾ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         cgMethod.getLangDoc().getDescriptionList().add(
-                "ƒNƒ‰ƒX‚Ì—˜—p‚ªI‚í‚Á‚½Û‚É•K‚¸‚±‚Ìƒƒ\ƒbƒh‚ğŒÄ‚Ño‚µ‚Ä‚­‚¾‚³‚¢B");
+                "ã‚¯ãƒ©ã‚¹ã®åˆ©ç”¨ãŒçµ‚ã‚ã£ãŸéš›ã«å¿…ãšã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã—ã¦ãã ã•ã„ã€‚");
 
         final List listLine = cgMethod.getLineList();
 

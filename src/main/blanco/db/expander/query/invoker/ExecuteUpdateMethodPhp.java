@@ -22,7 +22,7 @@ import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ð“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class ExecuteUpdateMethodPhp extends BlancoDbAbstractMethod {
     public ExecuteUpdateMethodPhp(final BlancoDbSetting argDbSetting,
@@ -36,37 +36,37 @@ public class ExecuteUpdateMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                "executeUpdate", "ŽÀsŒ^ƒNƒGƒŠ‚ðŽÀs‚µ‚Ü‚·B");
+                "executeUpdate", "å®Ÿè¡Œåž‹ã‚¯ã‚¨ãƒªã‚’å®Ÿè¡Œã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
-        cgMethod.setReturn(fCgFactory.createReturn("integer", "ˆ—‚³‚ê‚½s”"));
+        cgMethod.setReturn(fCgFactory.createReturn("integer", "å‡¦ç†ã•ã‚ŒãŸè¡Œæ•°"));
 
         /*
-         * ƒVƒ“ƒOƒ‹‘®«‚ª—LŒø‚Å‚ ‚éê‡‚É‚Í protected‚Æ‚µ‚Ü‚·B
+         * ã‚·ãƒ³ã‚°ãƒ«å±žæ€§ãŒæœ‰åŠ¹ã§ã‚ã‚‹å ´åˆã«ã¯ protectedã¨ã—ã¾ã™ã€‚
          */
         if (fSqlInfo.getSingle()) {
             cgMethod.setAccess("protected");
         } else {
-            // public‚Ì‚Ü‚Ü‚Å‚·B
+            // publicã®ã¾ã¾ã§ã™ã€‚
         }
 
         cgMethod.getLangDoc().getDescriptionList().add(
-                "ƒf[ƒ^ƒx[ƒX‚Ì§–ñˆá”½‚ª”­¶‚µ‚½ê‡‚É‚Í IntegrityConstraintException —áŠO‚ª”­¶‚µ‚Ü‚·B");
+                "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®åˆ¶ç´„é•åãŒç™ºç”Ÿã—ãŸå ´åˆã«ã¯ IntegrityConstraintException ä¾‹å¤–ãŒç™ºç”Ÿã—ã¾ã™ã€‚");
 
         if (fSqlInfo.getSingle()) {
             cgMethod.getLangDoc().getDescriptionList().add("");
             cgMethod.getLangDoc().getDescriptionList().add(
-                    "ƒVƒ“ƒOƒ‹‘®«‚ª—LŒø‚È‚Ì‚ÅƒXƒR[ƒv‚ðprotected‚Æ‚µ‚Ü‚·B");
+                    "ã‚·ãƒ³ã‚°ãƒ«å±žæ€§ãŒæœ‰åŠ¹ãªã®ã§ã‚¹ã‚³ãƒ¼ãƒ—ã‚’protectedã¨ã—ã¾ã™ã€‚");
             cgMethod.getLangDoc().getDescriptionList().add(
-                    "‚±‚Ìƒƒ\ƒbƒh‚Ì‘ã‚í‚è‚É ExecuteSingleUpdateƒƒ\ƒbƒh‚ð—˜—p‚µ‚Ä‚­‚¾‚³‚¢B");
+                    "ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ä»£ã‚ã‚Šã« ExecuteSingleUpdateãƒ¡ã‚½ãƒƒãƒ‰ã‚’åˆ©ç”¨ã—ã¦ãã ã•ã„ã€‚");
         }
 
         final List listLine = cgMethod.getLineList();
 
-        // statement‚ª–¢Šm•Û‚Å‚ ‚é‚Î‚ ‚¢A‹­§“I‚ÉprepareStatement‚ðŒÄ‚Ño‚µ‚Ü‚·B
+        // statementãŒæœªç¢ºä¿ã§ã‚ã‚‹ã°ã‚ã„ã€å¼·åˆ¶çš„ã«prepareStatementã‚’å‘¼ã³å‡ºã—ã¾ã™ã€‚
         listLine.add("if ($this->fStatement == NULL) {");
         listLine
-                .add("// PreparedStatement‚ª–¢Žæ“¾‚Ìó‘Ô‚È‚Ì‚ÅAExecuteNonQuery()ŽÀs‚Éæ—§‚¿PrepareStatement()ƒƒ\ƒbƒh‚ðŒÄ‚Ño‚µ‚ÄŽæ“¾‚µ‚Ü‚·B");
+                .add("// PreparedStatementãŒæœªå–å¾—ã®çŠ¶æ…‹ãªã®ã§ã€ExecuteNonQuery()å®Ÿè¡Œã«å…ˆç«‹ã¡PrepareStatement()ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã—ã¦å–å¾—ã—ã¾ã™ã€‚");
         listLine.add("$this->prepareStatement();");
         listLine.add("}");
 
@@ -84,8 +84,8 @@ public class ExecuteUpdateMethodPhp extends BlancoDbAbstractMethod {
                     + BlancoNameAdjuster.toClassName(columnStructure.getName());
         }
 
-        // —áŠOˆ—‚ðŠÜ‚ß‚Ä“WŠJ‚µ‚Ü‚·B
-        listLine.add("// TODO —áŠOˆ—‚ª“ü‚Á‚Ä‚¢‚Ü‚¹‚ñB");
+        // ä¾‹å¤–å‡¦ç†ã‚’å«ã‚ã¦å±•é–‹ã—ã¾ã™ã€‚
+        listLine.add("// TODO ä¾‹å¤–å‡¦ç†ãŒå…¥ã£ã¦ã„ã¾ã›ã‚“ã€‚");
         listLine.add("$result = $this->fStatement->execute();");
         listLine.add("return $this->fStatement->rowCount();");
     }

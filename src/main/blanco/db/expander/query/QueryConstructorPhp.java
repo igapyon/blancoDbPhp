@@ -20,7 +20,7 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class QueryConstructorPhp extends BlancoDbAbstractMethod {
     public QueryConstructorPhp(final BlancoDbSetting argDbSetting,
@@ -34,16 +34,16 @@ public class QueryConstructorPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(fCgClass
-                .getName(), fCgClass.getName() + "ƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Å‚·B");
+                .getName(), fCgClass.getName() + "ã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         cgMethod.getParameterList()
                 .add(
                         fCgFactory.createParameter("connection", "pdo.PDO",
-                                "ƒf[ƒ^ƒx[ƒXÚ‘±"));
+                                "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š"));
 
         cgMethod.getLangDoc().getDescriptionList().add(
-                "¦’ˆÓFƒNƒ‰ƒX‚ğ—˜—pŒãAÅŒã‚É•K‚¸close()ƒƒ\ƒbƒh‚ğŒÄ‚Ño‚·•K—v‚ª‚ ‚è‚Ü‚·B");
+                "â€»æ³¨æ„ï¼šã‚¯ãƒ©ã‚¹ã‚’åˆ©ç”¨å¾Œã€æœ€å¾Œã«å¿…ãšclose()ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã³å‡ºã™å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚");
 
         cgMethod.setConstructor(true);
 

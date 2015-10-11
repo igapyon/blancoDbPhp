@@ -25,7 +25,7 @@ import blanco.db.common.valueobject.BlancoDbSetting;
 import blanco.db.common.valueobject.BlancoDbSqlInfoStructure;
 
 /**
- * ŒÂ•Ê‚Ìƒƒ\ƒbƒh‚ğ“WŠJ‚·‚é‚½‚ß‚ÌƒNƒ‰ƒXB
+ * å€‹åˆ¥ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã€‚
  */
 public class GetQueryMethodPhp extends BlancoDbAbstractMethod {
     public GetQueryMethodPhp(final BlancoDbSetting argDbSetting,
@@ -39,22 +39,22 @@ public class GetQueryMethodPhp extends BlancoDbAbstractMethod {
 
     public void expand() {
         final BlancoCgMethod cgMethod = fCgFactory.createMethod("getQuery",
-                "ƒNƒGƒŠ‚Ìæ“¾ƒƒ\ƒbƒh");
+                "ã‚¯ã‚¨ãƒªã®å–å¾—ãƒ¡ã‚½ãƒƒãƒ‰");
         fCgClass.getMethodList().add(cgMethod);
 
-        cgMethod.setReturn(fCgFactory.createReturn("string", "ÀÛ‚ÉÀs‚³‚ê‚éSQL•¶"));
+        cgMethod.setReturn(fCgFactory.createReturn("string", "å®Ÿéš›ã«å®Ÿè¡Œã•ã‚Œã‚‹SQLæ–‡"));
 
-        cgMethod.getLangDoc().getDescriptionList().add("ÀÛ‚ÉÀs‚·‚éSQL•¶‚ğ–ß‚µ‚Ü‚·B");
+        cgMethod.getLangDoc().getDescriptionList().add("å®Ÿéš›ã«å®Ÿè¡Œã™ã‚‹SQLæ–‡ã‚’æˆ»ã—ã¾ã™ã€‚");
 
         final List listLine = cgMethod.getLineList();
 
         final String escapedQuery = BlancoJavaSourceUtil
                 .escapeStringAsJavaSource(fSqlInfo.getQuery());
 
-        // ƒNƒGƒŠ‚Ì #ƒpƒ‰ƒ[ƒ^‚Ì:‚Ö‚Ì•ÏŠ·
+        // ã‚¯ã‚¨ãƒªã® #ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®:ã¸ã®å¤‰æ›
         final String actualSql = getNaturalSqlStringForPhp(escapedQuery);
 
-        // SQL•¶‚ğ‰üs‚Ì•¶š—ñ‚Å•ª’f‚µ‚Ü‚·B
+        // SQLæ–‡ã‚’æ”¹è¡Œã®æ–‡å­—åˆ—ã§åˆ†æ–­ã—ã¾ã™ã€‚
         final String[] sqlLines = splitString(actualSql, "\\n");
 
         for (int index = 0; index < sqlLines.length; index++) {
@@ -74,10 +74,10 @@ public class GetQueryMethodPhp extends BlancoDbAbstractMethod {
     }
 
     /**
-     * —^‚¦‚ç‚ê‚½•¶š—ñ‚ğw’è‚Ì•¶š—ñ‚ğ‚Á‚Ä•ªŠ„‚µ‚Ü‚·B
+     * ä¸ãˆã‚‰ã‚ŒãŸæ–‡å­—åˆ—ã‚’æŒ‡å®šã®æ–‡å­—åˆ—ã‚’æŒã£ã¦åˆ†å‰²ã—ã¾ã™ã€‚
      * 
-     * ‚±‚ÌAPI‚Å‚ÍA“ü—Í•¶š—ñ‚©‚çÁ‚¦‚Ä¸‚í‚ê‚é•¶š‚Í‚ ‚è‚Ü‚¹‚ñB<br>
-     * ‹¤’ÊŠÖ”‰»‚ÌŒó•âAPI
+     * ã“ã®APIã§ã¯ã€å…¥åŠ›æ–‡å­—åˆ—ã‹ã‚‰æ¶ˆãˆã¦å¤±ã‚ã‚Œã‚‹æ–‡å­—ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚<br>
+     * å…±é€šé–¢æ•°åŒ–ã®å€™è£œAPI
      * 
      * @param originalString
      * @param delimiterString
@@ -112,9 +112,9 @@ public class GetQueryMethodPhp extends BlancoDbAbstractMethod {
     }
 
     /**
-     * Iterator‚ÉÀÛ‚É’£‚è‚Ü‚ê‚éƒiƒ`ƒ…ƒ‰ƒ‹‚ÈSQL•¶
+     * Iteratorã«å®Ÿéš›ã«å¼µã‚Šè¾¼ã¾ã‚Œã‚‹ãƒŠãƒãƒ¥ãƒ©ãƒ«ãªSQLæ–‡
      * 
-     * PDO‚Å‚Í u:’uŠ·–¼Ìv‚Æ‚È‚è‚Ü‚·B
+     * PDOã§ã¯ ã€Œ:ç½®æ›åç§°ã€ã¨ãªã‚Šã¾ã™ã€‚
      * 
      * @return
      */
@@ -128,7 +128,7 @@ public class GetQueryMethodPhp extends BlancoDbAbstractMethod {
         String resultSql = originalSqlQueryString;
         for (int index = 1; matcher.find(); index++) {
             String name = matcher.group();
-            // æ“ª‚Ì#‚ğœ‹‚µ‚½‚¤‚¦‚Åˆ—‚ğs‚¢‚Ü‚·B
+            // å…ˆé ­ã®#ã‚’é™¤å»ã—ãŸã†ãˆã§å‡¦ç†ã‚’è¡Œã„ã¾ã™ã€‚
             name = name.substring(1, name.length());
             resultSql = BlancoStringUtil.replaceAll(resultSql, "#" + name, ":"
                     + name);
