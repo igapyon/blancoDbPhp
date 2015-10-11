@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main"/>
+	<classpathentry kind="src" path="blanco/main"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="ANT_HOME/lib/ant.jar"/>
+	<classpathentry kind="var" path="JUNIT_HOME/junit.jar" sourcepath="ECLIPSE_HOME/plugins/org.eclipse.jdt.source_3.1.0/src/org.junit_3.8.1/junitsrc.zip"/>
+	<classpathentry kind="lib" path="lib/blancocg-1.4.9.jar"/>
+	<classpathentry kind="lib" path="lib/blancocommons-1.1.4.jar"/>
+	<classpathentry kind="lib" path="lib/blancodbmetadata-0.1.5.jar"/>
+	<classpathentry kind="lib" path="lib/blancosqlformatter-0.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jxl-2.6.2blanco4.jar"/>
+	<classpathentry kind="lib" path="lib/blancodbcommon-0.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/blancovalueobjectphp-0.0.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
